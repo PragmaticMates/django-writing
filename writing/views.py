@@ -30,7 +30,7 @@ class ArticleListView(ListView):
         return super().dispatch(request, *args, **kwargs)
 
     def get_whole_queryset(self):
-        return self.model.objects.all() \
+        return self.model.objects.published() \
             .select_related('author', 'category') \
             .order_by('-created')
 
