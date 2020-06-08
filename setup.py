@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='django-writing',
-    version='1.0.0',
+    version='1.0.1',
     description='Basic blog app for Django',
     long_description=open('README.md').read(),
     author='Pragmatic Mates',
