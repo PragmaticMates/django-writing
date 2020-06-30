@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-30 11:21+0200\n"
+"PO-Revision-Date: 2020-06-30 11:23+0058\n"
+"Last-Translator: b'Erik Telepovsky <erik.telepovsky@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Translated-Using: django-rosetta 0.9.4\n"
+
+#: models.py:17
+msgid "parent"
+msgstr "rodič"
+
+#: models.py:19 models.py:52
+msgid "title"
+msgstr "nadpis"
+
+#: models.py:22 models.py:60
+msgid "created"
+msgstr "vytvorené"
+
+#: models.py:23 models.py:61
+msgid "modified"
+msgstr "upravené"
+
+#: models.py:26 models.py:51
+msgid "category"
+msgstr "kategória"
+
+#: models.py:27
+msgid "categories"
+msgstr "kategórie"
+
+#: models.py:54
+msgid "author"
+msgstr "autor"
+
+#: models.py:55
+msgid "highlighted"
+msgstr "zvýraznené"
+
+#: models.py:56
+msgid "published"
+msgstr "publikované"
+
+#: models.py:57
+msgid "seen"
+msgstr "zobrazené"
+
+#: models.py:58
+msgid "excerpt"
+msgstr "výňatok"
+
+#: models.py:58
+msgid "preview"
+msgstr "náhľad"
+
+#: models.py:59
+msgid "content"
+msgstr "obsah"
+
+#: models.py:65
+msgid "article"
+msgstr "článok"
+
+#: models.py:66
+msgid "articles"
+msgstr "články"
