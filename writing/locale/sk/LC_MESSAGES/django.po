@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 11:21+0200\n"
-"PO-Revision-Date: 2020-06-30 11:23+0058\n"
-"Last-Translator: b'Erik Telepovsky <erik.telepovsky@gmail.com>'\n"
+"POT-Creation-Date: 2020-07-07 11:51+0200\n"
+"PO-Revision-Date: 2020-07-07 11:51+0058\n"
+"Last-Translator: b'Erik Telepovsky <erik@pragmaticmates.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,62 +19,70 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 "X-Translated-Using: django-rosetta 0.9.4\n"
 
-#: models.py:17
+#: models.py:18
 msgid "parent"
 msgstr "rodič"
 
-#: models.py:19 models.py:52
+#: models.py:20 models.py:53
 msgid "title"
 msgstr "nadpis"
 
-#: models.py:22 models.py:60
+#: models.py:23 models.py:68
 msgid "created"
 msgstr "vytvorené"
 
-#: models.py:23 models.py:61
+#: models.py:24 models.py:69
 msgid "modified"
 msgstr "upravené"
 
-#: models.py:26 models.py:51
+#: models.py:27 models.py:52
 msgid "category"
 msgstr "kategória"
 
-#: models.py:27
+#: models.py:28
 msgid "categories"
 msgstr "kategórie"
 
-#: models.py:54
+#: models.py:55
 msgid "author"
 msgstr "autor"
 
-#: models.py:55
+#: models.py:56
 msgid "highlighted"
 msgstr "zvýraznené"
 
-#: models.py:56
+#: models.py:57
 msgid "published"
 msgstr "publikované"
 
-#: models.py:57
+#: models.py:58
 msgid "seen"
 msgstr "zobrazené"
 
-#: models.py:58
+#: models.py:60
+msgid "image"
+msgstr "Obrázok"
+
+#: models.py:61
+msgid "photo or image"
+msgstr "fotka alebo obrázok"
+
+#: models.py:66
 msgid "excerpt"
 msgstr "výňatok"
 
-#: models.py:58
+#: models.py:66
 msgid "preview"
 msgstr "náhľad"
 
-#: models.py:59
+#: models.py:67
 msgid "content"
 msgstr "obsah"
 
-#: models.py:65
+#: models.py:73
 msgid "article"
 msgstr "článok"
 
-#: models.py:66
+#: models.py:74
 msgid "articles"
 msgstr "články"

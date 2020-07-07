@@ -6,6 +6,7 @@ from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 from martor.models import MartorField
 from mptt.models import MPTTModel, TreeForeignKey
+from sorl import thumbnail
 
 from writing.mixins import SlugMixin
 from writing.querysets import ArticleQuerySet
@@ -55,6 +56,13 @@ class Article(SlugMixin, models.Model):
     is_highlighted = models.BooleanField(_('highlighted'), default=False)
     is_published = models.BooleanField(_('published'), default=True)
     seen = models.PositiveSmallIntegerField(_('seen'), db_index=True, default=0)
+    image = thumbnail.ImageField(
+        verbose_name=_('image'),
+        help_text=_('photo or image'),
+        max_length=1024,
+        upload_to='images',
+        blank=True
+    )
     excerpt = models.TextField(_('excerpt'), help_text=_('preview'))
     content = MartorField(_('content'))
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
