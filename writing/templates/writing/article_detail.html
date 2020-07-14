@@ -5,7 +5,7 @@
 
 <article>
     <blockquote>{{ article.excerpt }}</blockquote>
-    <p>{{ article.content|safe_markdown }}</p>
+    {{ article.content|safe_markdown }}
 </article>
 
 {# TODO: comments #}
