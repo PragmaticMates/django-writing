@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.utils.functional import cached_property
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
+from django_countries.fields import CountryField
 from martor.models import MartorField
 from mptt.models import MPTTModel, TreeForeignKey
 from sorl import thumbnail
@@ -65,6 +66,7 @@ class Article(SlugMixin, models.Model):
     )
     excerpt = models.TextField(_('excerpt'), help_text=_('preview'))
     content = MartorField(_('content'))
+    language = models.CharField(_('language'), max_length=2, db_index=True, blank=True)
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
     modified = models.DateTimeField(_(u'modified'), auto_now=True)
     objects = ArticleQuerySet.as_manager()
