@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.views.generic import DetailView, ListView
 
 from writing.models import Article, Category
@@ -36,7 +37,9 @@ class ArticleListView(ListView):
 
     def get_queryset(self):
         # return self.sort_queryset(self.filter.qs)
-        return self.get_whole_queryset()
+        return self.get_whole_queryset().filter(
+            (Q(language=self.request.LANGUAGE_CODE) | Q(language__exact='') | Q(language__isnull=True))
+        )
 
     def get_context_data(self, *args, **kwargs):
         context_data = super().get_context_data(*args, **kwargs)
