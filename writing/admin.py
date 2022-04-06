@@ -22,7 +22,7 @@ class ArticleAdminForm(forms.ModelForm):
 class ArticleAdmin(admin.ModelAdmin):
     search_fields = ('title', 'category__title', 'excerpt', 'content')
     date_hierarchy = 'created'
-    list_display = ('title', 'category', 'language', 'author', 'is_highlighted', 'is_published', 'created', 'modified')
+    list_display = ('title', 'category', 'language', 'author', 'is_highlighted', 'is_published', 'publish_date', 'created', 'modified')
     list_filter = ('is_highlighted', 'is_published', 'language', ('category', TreeRelatedFieldListFilter))
     list_editable = ('is_highlighted', 'is_published')
     list_select_related = ['category', 'author']
