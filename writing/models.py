@@ -67,6 +67,7 @@ class Article(SlugMixin, models.Model):
     excerpt = models.TextField(_('excerpt'), help_text=_('preview'))
     content = MartorField(_('content'))
     language = models.CharField(_('language'), max_length=2, db_index=True, blank=True)
+    publish_date = models.DateField(_(u'publish_date'), blank=True, null=True, default=None)
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
     modified = models.DateTimeField(_(u'modified'), auto_now=True)
     objects = ArticleQuerySet.as_manager()
