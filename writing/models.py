@@ -3,7 +3,6 @@ from django.db import models
 from django.urls import reverse
 from django.utils.functional import cached_property
 from django.utils.text import slugify
-from django_countries.fields import CountryField
 from martor.models import MartorField
 from mptt.models import MPTTModel, TreeForeignKey
 from sorl import thumbnail
@@ -11,12 +10,7 @@ from sorl import thumbnail
 from writing.mixins import SlugMixin
 from writing.querysets import ArticleQuerySet
 
-try:
-    # older Django
-    from django.utils.translation import ugettext_lazy as _
-except ImportError:
-    # Django >= 3
-    from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class Category(SlugMixin, MPTTModel):
