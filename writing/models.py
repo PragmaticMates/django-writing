@@ -3,9 +3,9 @@ from django.db import models
 from django.urls import reverse
 from django.utils.functional import cached_property
 from django.utils.text import slugify
-from martor.models import MartorField
 from mptt.models import MPTTModel, TreeForeignKey
 from sorl import thumbnail
+from tinymce.models import HTMLField
 
 from writing.mixins import SlugMixin
 from writing.querysets import ArticleQuerySet
@@ -65,7 +65,7 @@ class Article(SlugMixin, models.Model):
         blank=True
     )
     excerpt = models.TextField(_('excerpt'), help_text=_('preview'))
-    content = MartorField(_('content'))
+    content = HTMLField(_('content'))
     language = models.CharField(_('language'), max_length=2, db_index=True, blank=True)
     publish_date = models.DateField(_(u'publish date'), blank=True, null=True, default=None)
     created = models.DateTimeField(_(u'created'), auto_now_add=True)

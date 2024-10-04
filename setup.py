@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='django-writing',
-    version='1.1.0',
+    version='2.0.0',
     description='Basic blog app for Django',
     long_description=open('README.md').read(),
     author='Pragmatic Mates',
@@ -17,7 +17,7 @@ setup(
         'writing.migrations'
     ],
     include_package_data=True,
-    install_requires=('django', 'markdown', 'martor'),
+    install_requires=('django', 'markdown', 'martor', 'django-tinymce'),
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.7',
