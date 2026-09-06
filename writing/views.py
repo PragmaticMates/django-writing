@@ -18,7 +18,8 @@ class ArticleDetailView(DetailView):
         return super().dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
-        return super().get_queryset().select_related('author')
+        # unpublished articles stay out of reach even for someone who knows the slug
+        return super().get_queryset().published().select_related('author')
 
 
 class ArticleListView(ListView):
